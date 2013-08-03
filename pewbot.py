@@ -29,14 +29,16 @@ class Pewbot(object):
             self.rooms.append(croom)
 
         self.commands = self._discover_commands()
-        print self.commands
 
-        while len(self.rooms) > 0:
-            try:
-                self._fetch_messages()
-                sleep(2)   # have a rest, pewbot
-            except Exception as e:
-                print e
+        if 'test' in args:
+            _handle_message('melbourne', None)
+        else:
+            while len(self.rooms) > 0:
+                try:
+                    self._fetch_messages()
+                    sleep(2)   # have a rest, pewbot
+                except Exception as e:
+                    print e
 
     def _discover_commands(self):
         command_dir = os.path.join('./pewbot/', 'commands')
