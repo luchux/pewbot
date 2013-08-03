@@ -1,4 +1,4 @@
-from pewbot.commands.base import PewbotCommand
+from pewbot.base import PewbotCommand
 import requests
 import json
 
