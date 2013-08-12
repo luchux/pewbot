@@ -10,7 +10,7 @@ class PewbotCommand(object):
     __metaclass__ = PewbotMeta
     help = ""
 
-    def handle(self, message):
+    def handle(self, message, room_id):
         """
         handle() should return either a list of messages to be sent
         to the room, or None

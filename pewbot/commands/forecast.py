@@ -9,7 +9,7 @@ TOWN_LAT_LNG = {
 }
 class Command(PewbotCommand):
     help = "get the current weather for melbourne"
-    def handle(self, message):
+    def handle(self, message, room_id):
         if message.startswith('pewbot forecast'):
             words = message.split(' ')
             if len(words) > 2:

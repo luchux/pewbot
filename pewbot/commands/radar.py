@@ -16,7 +16,7 @@ TOWN_RADAR = {
     'perth': '703'
 }
 class Command(PewbotCommand):
-    def handle(self, message):
+    def handle(self, message, room_id):
         radar_id = None
         message = message.lower()
         if message.startswith('pewbot radar'):
